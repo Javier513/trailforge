@@ -1,0 +1,142 @@
+/**
+ * Variables SCSS globales
+ * Contiene todos los colores, espaciados y valores reutilizables
+ */
+
+// ============================================
+// COLORES
+// ============================================
+$color-primary: #351D14;     // Marrón oscuro principal
+$color-secondary: #DE994E;   // Naranja/dorado
+$color-light-bg: #F5F2EB;    // Fondo claro
+$color-white: #FFFFFF;       // Blanco
+$color-text-dark: #351D14;   // Texto oscuro
+$color-text-light: #6b6375;  // Texto gris claro
+$color-border: #e5e4e7;      // Borde gris
+$color-gray-50: #f9fafb;     // Gris muy claro
+$color-gray-100: #f3f4f6;    // Gris claro
+$color-gray-200: #e5e7eb;    // Gris medio
+$color-gray-400: #9ca3af;    // Gris intermedio
+$color-gray-500: #6b7280;    // Gris oscuro
+$color-gray-600: #4b5563;    // Gris muy oscuro
+
+// ============================================
+// ESPACIADO
+// ============================================
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+
+// ============================================
+// TAMAÑOS DE FUENTE
+// ============================================
+$font-size-xs: 0.75rem;     // 12px
+$font-size-sm: 0.875rem;    // 14px
+$font-size-base: 1rem;      // 16px
+$font-size-lg: 1.125rem;    // 18px
+$font-size-xl: 1.25rem;     // 20px
+$font-size-2xl: 1.5rem;     // 24px
+$font-size-3xl: 1.875rem;   // 30px
+$font-size-4xl: 2.25rem;    // 36px
+$font-size-5xl: 3rem;       // 48px
+
+// ============================================
+// PESOS DE FUENTE
+// ============================================
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ============================================
+// BORDER RADIUS
+// ============================================
+$border-radius-sm: 0.375rem;   // 6px
+$border-radius-md: 0.5rem;     // 8px
+$border-radius-lg: 1rem;       // 16px
+$border-radius-xl: 1.25rem;    // 20px
+$border-radius-2xl: 1.5rem;    // 24px
+$border-radius-3xl: 1.875rem;  // 30px
+$border-radius-full: 9999px;   // Circle
+
+// ============================================
+// SOMBRAS
+// ============================================
+$box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$box-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+$box-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// ============================================
+// TRANSICIONES
+// ============================================
+$transition-fast: 150ms ease-in-out;
+$transition-base: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;
+
+// ============================================
+// BREAKPOINTS (Responsive)
+// ============================================
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// ============================================
+// MIXINS ÚTILES
+// ============================================
+
+// Flexbox centrado
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flexbox entre elementos
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Responsive media query
+@mixin media-min($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Truncar texto
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Gradiente
+@mixin gradient($from, $to, $dir: to right) {
+  background: linear-gradient($dir, $from, $to);
+}
+
+// Transición suave
+@mixin smooth-transition($property: all) {
+  transition: $property $transition-base;
+}
+
+// Focus ring para accesibilidad
+@mixin focus-ring {
+  outline: none;
+  ring: 2px $color-secondary;
+  ring-offset: 2px;
+}
