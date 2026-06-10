@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "subtitle": "Explora aventuras sin límites",
+    "searchPlaceholder": "Buscar ruta, ciudad, tipo de actividad...",
+    "categoriesTitle": "Categorías de Actividades",
+    "categories": {
+      "hiking": "Senderismo",
+      "mtb": "MTB / Ciclismo",
+      "running": "Running",
+      "ferrata": "Vías ferratas"
+    },
+    "featuredTitle": "Rutas Destacadas",
+    "viewAll": "Ver todas",
+    "viewDetails": "Ver Detalles",
+    "difficulty": {
+      "easy": "FÁCIL",
+      "moderate": "MODERADA",
+      "hard": "DIFÍCIL"
+    }
+  },
+  "footer": {
+    "about": "Forja tu propio camino. Plataforma de rutas y aventuras al aire libre para corredores, senderistas y ciclistas.",
+    "quickLinks": "Enlaces Rápidos",
+    "quickContact": "Contacto Rápido",
+    "rights": "TrailForge. Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "forAdventurers": "para los aventureros"
+  }
+}

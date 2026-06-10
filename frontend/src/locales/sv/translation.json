@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Hem",
+    "about": "Om Oss",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "subtitle": "Utforska obegränsade äventyr",
+    "searchPlaceholder": "Sök rutt, stad, aktivitetstyp...",
+    "categoriesTitle": "Aktivitetskategorier",
+    "categories": {
+      "hiking": "Vandring",
+      "mtb": "MTB / Cykling",
+      "running": "Löpning",
+      "ferrata": "Via Ferrata"
+    },
+    "featuredTitle": "Utvalda Rutter",
+    "viewAll": "Visa alla",
+    "viewDetails": "Visa Detaljer",
+    "difficulty": {
+      "easy": "LÄTT",
+      "moderate": "MEDEL",
+      "hard": "SVÅR"
+    }
+  },
+  "footer": {
+    "about": "Skapa din egen väg. Plattform för utomhusrutter och äventyr för löpare, vandrare och cyklister.",
+    "quickLinks": "Snabblänkar",
+    "quickContact": "Snabbkontakt",
+    "rights": "TrailForge. Alla rättigheter förbehållna.",
+    "madeWith": "Skapad med",
+    "forAdventurers": "för äventyrare"
+  }
+}

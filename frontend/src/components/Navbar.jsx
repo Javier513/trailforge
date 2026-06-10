@@ -1,54 +1,104 @@
-/**
- * Componente Navbar - Barra de navegación principal
- * 
- * Este componente es responsable de mostrar la navegación principal de la aplicación.
- * Contiene el logo/home a la izquierda y tres botones en el navbar:
- * - Home (logo animado)
- * - Quiénes Somos
- * - Contacto
- * 
- * Usa React Router para navegar entre las diferentes secciones de la aplicación
- */
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Home, Moon, Sun, Eye, EyeOff } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '../context/ThemeContext';
+import { useA11y } from '../context/A11yContext';
+import './Navbar.scss';
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
+  const { a11yMode, toggleA11yMode } = useA11y();
+
+  const [showHouseIcon, setShowHouseIcon] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowHouseIcon(prev => !prev);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const isActive = (path) => location.pathname === path;
+
   return (
-    // Contenedor principal del navbar con estilos personalizados
-    <nav className="w-full bg-brand-dark text-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="navbar">
+      <div className="navbar__container">
         
-        {/* Logo / Home Button - A la izquierda */}
-        <Link 
-          to="/" 
-          className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300"
-          title="Volver a inicio"
-        >
-          {/* Icono de casa que se mostrará en el navbar */}
-          <Home className="w-8 h-8 text-brand-orange" />
-          <span className="text-xl font-bold text-brand-orange">TrailForge</span>
+        {/* Logo / Home Button - Izquierda */}
+        <Link to="/" className="navbar__logo" title={t('navbar.home')}>
+          <div className="icon-container">
+            {showHouseIcon ? (
+              <Home style={{ width: '100%', height: '100%', color: 'var(--brand-orange)' }} strokeWidth={1.5} />
+            ) : (
+              <img 
+                src="/src/assets/logoTrailForge.png" 
+                alt="TrailForge Logo" 
+                style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%' }}
+                onError={(e) => {
+                  e.target.src = "https://placehold.co/150x150/351D14/ffffff?text=Trail&font=Montserrat";
+                }}
+              />
+            )}
+          </div>
+          <span>TrailForge</span>
         </Link>
 
-        {/* Botones de navegación - En el centro/derecha */}
-        <div className="flex items-center gap-8">
-          {/* Botón: Quiénes Somos */}
+        {/* Botones de navegación y acciones */}
+        <div className="navbar__nav">
+          <Link 
+            to="/"
+            className={`navbar__link ${isActive('/') ? 'navbar__link--active' : ''}`}
+          >
+            {t('navbar.home')}
+          </Link>
+          
           <Link 
             to="/about"
-            className="hover:text-brand-orange transition-colors duration-300 font-semibold"
+            className={`navbar__link ${isActive('/about') ? 'navbar__link--active' : ''}`}
           >
-            Quiénes Somos
+            {t('navbar.about')}
           </Link>
 
-          {/* Botón: Contacto */}
           <Link 
             to="/contact"
-            className="bg-brand-orange hover:bg-brand-orange/90 text-brand-dark px-6 py-2 rounded-full font-semibold transition-colors duration-300"
+            className={`btn btn--primary ${isActive('/contact') ? 'navbar__link--active' : ''}`}
+            style={isActive('/contact') ? { backgroundColor: 'transparent', border: '1px solid var(--brand-orange)', color: 'var(--brand-orange)' } : {}}
           >
-            Contacto
+            {t('navbar.contact')}
           </Link>
+          
+          <div className="navbar__actions">
+            {/* Idiomas */}
+            <select 
+              className="navbar__lang-select" 
+              onChange={(e) => changeLanguage(e.target.value)}
+              value={i18n.language}
+              title="Seleccionar idioma"
+            >
+              <option value="es">🇪🇸 ES</option>
+              <option value="en">🇬🇧 EN</option>
+              <option value="sv">🇸🇪 SV</option>
+            </select>
+
+            {/* Accesibilidad */}
+            <button onClick={toggleA11yMode} className="navbar__icon-btn" title="Toggle Accessibility">
+              {a11yMode ? <EyeOff size={24} /> : <Eye size={24} />}
+            </button>
+
+            {/* Tema */}
+            <button onClick={toggleTheme} className="navbar__icon-btn" title="Toggle Theme">
+              {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+            </button>
+          </div>
         </div>
+
       </div>
     </nav>
   );

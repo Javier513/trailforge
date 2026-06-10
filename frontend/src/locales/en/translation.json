@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "subtitle": "Explore limitless adventures",
+    "searchPlaceholder": "Search route, city, activity type...",
+    "categoriesTitle": "Activity Categories",
+    "categories": {
+      "hiking": "Hiking",
+      "mtb": "MTB / Cycling",
+      "running": "Running",
+      "ferrata": "Via Ferrata"
+    },
+    "featuredTitle": "Featured Routes",
+    "viewAll": "View all",
+    "viewDetails": "View Details",
+    "difficulty": {
+      "easy": "EASY",
+      "moderate": "MODERATE",
+      "hard": "HARD"
+    }
+  },
+  "footer": {
+    "about": "Forge your own path. Outdoor routing and adventure platform for runners, hikers, and cyclists.",
+    "quickLinks": "Quick Links",
+    "quickContact": "Quick Contact",
+    "rights": "TrailForge. All rights reserved.",
+    "madeWith": "Made with",
+    "forAdventurers": "for adventurers"
+  }
+}

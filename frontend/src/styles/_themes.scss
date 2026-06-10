@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../assets/fonts/OpenDyslexic-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Paleta de Colores Clara (Por defecto) */
+  --brand-dark: #351D14;
+  --brand-light: #DE994E;
+  --brand-orange: #DE994E;
+  --brand-bg: #F5F2EB;
+  
+  --bg-color: #F5F2EB;
+  --surface-color: #ffffff;
+  --text-primary: #351D14;
+  --text-secondary: #4b5563;
+  
+  --border-color: rgba(222, 153, 78, 0.2);
+  --border-hover: rgba(222, 153, 78, 0.5);
+  
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+
+  /* Elementos con fondo oscuro por defecto (Navbar, Footer, Hero) */
+  --inverted-bg: #351D14;
+  --inverted-text: #ffffff;
+  --inverted-text-muted: rgba(255, 255, 255, 0.7);
+
+  --hero-overlay-from: rgba(53, 29, 20, 1);
+  --hero-overlay-via: rgba(53, 29, 20, 0.95);
+  --hero-overlay-to: rgba(53, 29, 20, 0.9);
+
+  /* Fuentes y Espaciado por defecto */
+  --font-primary: 'Inter', sans-serif;
+  --letter-spacing: normal;
+  --word-spacing: normal;
+  --line-height: 1.5;
+}
+
+/* TEMA OSCURO */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --shadow-hover: rgba(0, 0, 0, 0.7);
+
+  /* Las partes que eran oscuras (Navbar, Hero, Footer) 
+     se ponen claras (blanco/gris) para verse perfectas */
+  --inverted-bg: #f3f4f6;
+  --inverted-text: #111827;
+  --inverted-text-muted: #4b5563;
+
+  /* Invertir el gradient del hero para que sea claro */
+  --hero-overlay-from: rgba(243, 244, 246, 1);
+  --hero-overlay-via: rgba(243, 244, 246, 0.95);
+  --hero-overlay-to: rgba(243, 244, 246, 0.9);
+
+  --brand-dark: #f3f4f6; 
+  --brand-bg: #1e1e1e; 
+  --brand-orange: #f0b27a; 
+}
+
+/* MODO ACCESIBILIDAD */
+[data-a11y="true"] {
+  --font-primary: 'OpenDyslexic', sans-serif !important;
+  --letter-spacing: 0.1em;
+  --word-spacing: 0.2em;
+  --line-height: 1.8;
+  
+  --text-primary: #000000;
+  --surface-color: #ffffff;
+  --inverted-bg: #000000;
+  --inverted-text: #ffffff;
+  --inverted-text-muted: #ffffff;
+}
+
+[data-theme="dark"][data-a11y="true"] {
+  --text-primary: #ffffff;
+  --surface-color: #000000;
+  --inverted-bg: #ffffff;
+  --inverted-text: #000000;
+  --inverted-text-muted: #000000;
+}
