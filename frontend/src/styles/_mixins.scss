@@ -1,0 +1,59 @@
+/* _mixins.scss */
+@import 'variables';
+
+/* Mixin para Breakpoints (Mobile First) */
+@mixin md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $bp-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $bp-xl) {
+    @content;
+  }
+}
+
+/* Mixin para Flexbox centrado */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mixin para Flexbox distribuido */
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botón primario */
+@mixin btn-primary {
+  background-color: $brand-orange;
+  color: $brand-dark;
+  font-weight: 600;
+  padding: $spacing-2 $spacing-6;
+  border-radius: $border-radius-full;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: darken($brand-orange, 10%);
+  }
+}
+
+/* Estilo de tarjeta (Glassmorphism / Normal) */
+@mixin card {
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: $spacing-6;
+}

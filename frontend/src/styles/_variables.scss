@@ -1,0 +1,40 @@
+/* _variables.scss */
+/* Colores principales */
+$brand-dark: #351D14;
+$brand-light: #DE994E;
+$brand-orange: #DE994E;
+$brand-bg: #F5F2EB;
+$white: #ffffff;
+$black: #000000;
+$gray-light: #f3f4f6;
+$gray-dark: #374151;
+
+/* Modo oscuro colores inversos */
+$dark-mode-bg: #1a1a1a;
+$dark-mode-text: #ffffff;
+$dark-mode-card-bg: #2d2d2d;
+
+/* Fuentes */
+$font-sans: 'Inter', sans-serif;
+$font-dyslexic: 'OpenDyslexic', sans-serif;
+
+/* Breakpoints para Responsive (Mobile First) */
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+/* Espaciados */
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+
+/* Bordes */
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-full: 9999px;
