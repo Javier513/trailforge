@@ -1,0 +1,105 @@
+.navbar {
+  width: 100%;
+  background-color: var(--inverted-bg);
+  color: var(--inverted-text);
+  box-shadow: 0 10px 15px -3px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .icon-container {
+      width: 3.5rem; /* Larger logo */
+      height: 3.5rem; /* Larger logo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+    }
+
+    span {
+      font-size: 1.5rem; /* Slightly larger text */
+      font-weight: 700;
+      color: var(--brand-orange);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: var(--inverted-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--brand-orange);
+    }
+
+    &--active {
+      color: var(--brand-orange);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--inverted-text);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.2);
+    }
+  }
+
+  &__lang-select {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--inverted-text);
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    
+    option {
+      background-color: var(--surface-color);
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+  }
+}

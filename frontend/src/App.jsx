@@ -13,6 +13,9 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import { A11yProvider } from './context/A11yContext';
+import ScrollToTop from './components/ScrollToTop';
 
 // Importar componentes de páginas
 import Navbar from './components/Navbar';
@@ -23,39 +26,29 @@ import Contact from './components/pages/Contact';
 
 export default function App() {
   return (
-    // BrowserRouter: Habilita React Router para navegar entre páginas
-    <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-white">
-        
-        {/* === NAVBAR GLOBAL === 
-            Aparece en todas las páginas, en la parte superior */}
-        <Navbar />
-
-        {/* === CONTENIDO PRINCIPAL ===
-            Las diferentes páginas se renderizan aquí según la ruta actual
+    <ThemeProvider>
+      <A11yProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <div className="app-container">
             
-            Routes disponibles:
-            - "/"           → Home (página de inicio)
-            - "/about"      → About (quiénes somos)
-            - "/contact"    → Contact (formulario de contacto)
-        */}
-        <main className="flex-1">
-          <Routes>
-            {/* Ruta Home - Página principal */}
-            <Route path="/" element={<Home />} />
+            {/* === NAVBAR GLOBAL === */}
+            <Navbar />
 
-            {/* Ruta About - Página Quiénes Somos */}
-            <Route path="/about" element={<About />} />
+            {/* === CONTENIDO PRINCIPAL === */}
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
 
-            {/* Ruta Contact - Página de Contacto con formulario */}
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        {/* === FOOTER GLOBAL === 
-            Aparece en todas las páginas, en la parte inferior */}
-        <Footer />
-      </div>
-    </BrowserRouter>
+            {/* === FOOTER GLOBAL === */}
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </A11yProvider>
+    </ThemeProvider>
   );
 }
