@@ -86,20 +86,133 @@
     }
   }
 
-  &__lang-select {
+  &__lang-selector {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Botón principal del idioma (bandera actual) */
+  &__lang-btn {
     background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--inverted-text);
-    font-size: 1.25rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    border: 2px solid var(--border-color); /* Borde un poco más grueso para destacar */
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
     outline: none;
+    width: 2.8rem; /* Aumentado tamaño general del botón */
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Asegura que la bandera no se salga del círculo */
     
-    option {
-      background-color: var(--surface-color);
-      color: var(--text-primary);
-      font-size: 1rem;
+    &:hover {
+      border-color: var(--brand-orange);
+      transform: scale(1.05);
+    }
+  }
+
+  /* Menú desplegable flotante de los otros idiomas */
+  &__lang-menu {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    z-index: 100;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+
+  /* Cada opción individual en el menú de banderas */
+  &__lang-option {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0.6; /* Un poco translúcido si no está activo */
+    overflow: hidden; /* Evitar derrames de la imagen */
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    &.active {
+      opacity: 1;
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+  }
+
+  /* Imagen real de la bandera (SVG/PNG) */
+  .flag-img {
+    width: 100%; /* Ocupa todo el contenedor circular */
+    height: 100%;
+    object-fit: cover; /* Recorta la bandera para llenar el círculo perfectamente */
+    border-radius: 50%;
+  }
+
+  &__mobile-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--inverted-text);
+    cursor: pointer;
+  }
+
+  /* --- MEDIA QUERIES MOBILE --- */
+  @media (max-width: 768px) {
+    &__mobile-btn {
+      display: block;
+    }
+
+    &__nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--inverted-bg);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+      box-shadow: 0 10px 15px -3px var(--shadow-color);
+      transform: translateY(-150%);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+
+      &--open {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 40;
+      }
+    }
+
+    &__actions {
+      width: 100%;
+      justify-content: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
     }
   }
 }

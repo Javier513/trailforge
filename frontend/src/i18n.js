@@ -4,12 +4,14 @@ import { initReactI18next } from 'react-i18next';
 import esTranslation from './locales/es/translation.json';
 import enTranslation from './locales/en/translation.json';
 import svTranslation from './locales/sv/translation.json';
+import deTranslation from './locales/de/translation.json';
 
 // the translations
 const resources = {
   es: { translation: esTranslation },
   en: { translation: enTranslation },
-  sv: { translation: svTranslation }
+  sv: { translation: svTranslation },
+  de: { translation: deTranslation }
 };
 
 i18n

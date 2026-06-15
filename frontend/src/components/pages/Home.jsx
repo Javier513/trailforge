@@ -19,7 +19,7 @@ export default function Home() {
         <div className="home-hero__bg"></div>
         <div className="home-hero__content">
           <h1 style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--inverted-text)', marginBottom: '1rem' }}>
-            Explora aventuras sin límites
+            {t('home.title')}
           </h1>
           <p className="home-hero__subtitle">{t('home.subtitle')}</p>
         </div>
@@ -63,8 +63,8 @@ export default function Home() {
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>Pico Torrecilla - Málaga</h3>
-                    <p>Una ruta espectacular con vistas panorámicas de toda la provincia de Málaga</p>
+                    <h3>{t('home.routes.torrecilla.title')}</h3>
+                    <p>{t('home.routes.torrecilla.desc')}</p>
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
@@ -78,8 +78,8 @@ export default function Home() {
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>Pico Mulhacén - Sierra Nevada (Granada)</h3>
-                    <p>Descubre el pico más alto de la Península Ibérica</p>
+                    <h3>{t('home.routes.mulhacen.title')}</h3>
+                    <p>{t('home.routes.mulhacen.desc')}</p>
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
@@ -93,8 +93,8 @@ export default function Home() {
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>Laguna Grande de Gredos</h3>
-                    <p>Aventura y natural en esta hermosa ruta de montaña</p>
+                    <h3>{t('home.routes.gredos.title')}</h3>
+                    <p>{t('home.routes.gredos.desc')}</p>
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
@@ -108,8 +108,8 @@ export default function Home() {
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>Ruta del Cares - Picos de Europa</h3>
-                    <p>La legendaria ruta por el cañón. Espectáculo de naturaleza</p>
+                    <h3>{t('home.routes.cares.title')}</h3>
+                    <p>{t('home.routes.cares.desc')}</p>
                   </div>
                   <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
                 </div>
@@ -123,8 +123,8 @@ export default function Home() {
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>Pico del Lobo - Sierra de Ayllon</h3>
-                    <p>Una ruta espectacular con vistas panorámicas del acantilado</p>
+                    <h3>{t('home.routes.lobo.title')}</h3>
+                    <p>{t('home.routes.lobo.desc')}</p>
                   </div>
                   <span className="difficulty difficulty--easy">{t('home.difficulty.easy')}</span>
                 </div>

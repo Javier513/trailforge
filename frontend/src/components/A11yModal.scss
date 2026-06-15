@@ -1,0 +1,125 @@
+.a11y-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* El fondo no tiene opacidad muy fuerte para no tapar la web por completo */
+  background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(2px);
+}
+
+.a11y-modal {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h2 {
+      margin: 0;
+      color: #6a4cff; /* Morado como en la imagen */
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: center;
+      flex: 1;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #666;
+      padding: 0.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .a11y-btn {
+    background-color: #f1f3f9;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #6a4cff;
+    transition: all 0.2s ease;
+
+    span {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background-color: #e5e8f5;
+      transform: translateY(-2px);
+    }
+
+    &.active {
+      border-color: #6a4cff;
+      background-color: #e5e8f5;
+    }
+  }
+
+  &__reset {
+    background-color: #e67e22; /* Naranja estilo TrailForge */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #d35400;
+    }
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

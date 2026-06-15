@@ -5,7 +5,8 @@
     "contact": "Contact"
   },
   "home": {
-    "subtitle": "Explore limitless adventures",
+    "title": "Explore limitless adventures",
+    "subtitle": "Find the perfect route for your next adventure",
     "searchPlaceholder": "Search route, city, activity type...",
     "categoriesTitle": "Activity Categories",
     "categories": {
@@ -21,6 +22,141 @@
       "easy": "EASY",
       "moderate": "MODERATE",
       "hard": "HARD"
+    },
+    "routes": {
+      "torrecilla": {
+        "title": "Torrecilla Peak - Málaga",
+        "desc": "A spectacular route with panoramic views of the entire Málaga province"
+      },
+      "mulhacen": {
+        "title": "Mulhacén Peak - Sierra Nevada (Granada)",
+        "desc": "Discover the highest peak in the Iberian Peninsula"
+      },
+      "gredos": {
+        "title": "Great Lagoon of Gredos",
+        "desc": "Adventure and nature on this beautiful mountain route"
+      },
+      "cares": {
+        "title": "Cares Route - Picos de Europa",
+        "desc": "The legendary canyon route. A spectacle of nature"
+      },
+      "lobo": {
+        "title": "Lobo Peak - Sierra de Ayllón",
+        "desc": "A spectacular route with panoramic views of the cliffs"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Discover the history of TrailForge and our passion for outdoor adventures"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "p1": "At TrailForge, we believe that nature is one of life's greatest gifts. Our mission is to connect adventurers, hikers, cyclists, and runners with the most beautiful and challenging routes in our country.",
+      "p2": "We want to make exploring new routes easy, safe, and accessible for everyone, from beginners to experienced athletes."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": {
+        "passion": {
+          "title": "Passion",
+          "desc": "We are passionate about nature and want to share that passion with you"
+        },
+        "integrity": {
+          "title": "Integrity",
+          "desc": "Truthful information, verified routes, and honest reviews from our users"
+        },
+        "community": {
+          "title": "Community",
+          "desc": "We build a community where adventurers connect and share experiences"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "We use technology to continuously improve our users' experience"
+        }
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "intro": "We are a diverse team of developers, designers, and nature enthusiasts. Each of us brings our outdoor sports experience to create the best routing platform in the country.",
+      "members": {
+        "maria": {
+          "role": "Founder & CEO",
+          "desc": "Experienced mountaineer and nature lover. Directs the vision of TrailForge."
+        },
+        "carlos": {
+          "role": "CTO & Developer",
+          "desc": "Software engineer specializing in mobile and web applications."
+        },
+        "ana": {
+          "role": "Design Director",
+          "desc": "UX/UI designer with a passion for creating intuitive and beautiful experiences."
+        }
+      }
+    },
+    "partners": {
+      "title": "Collaborating Companies",
+      "intro": "At TrailForge we work with the best professionals to offer you quality services on your adventures.",
+      "companies": {
+        "harman": {
+          "role": "Bicycle Rental",
+          "desc": "Specialists in MTB and road cycling. They offer top quality rental and maintenance."
+        },
+        "summit": {
+          "role": "Guided Hiking and Trekking Routes",
+          "desc": "Expert local guides to explore the mountains with total safety and learn about the environment."
+        }
+      },
+      "ferratas": "Both companies collaborate closely to offer equipment and expert guiding on the best Via Ferratas in the region."
+    },
+    "stats": {
+      "title": "Why choose TrailForge?",
+      "routes": "Verified routes",
+      "adventurers": "Active adventurers",
+      "security": "Guaranteed security"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Register now and join our community of adventurers"
+    },
+    "info": {
+      "title": "Direct Contact",
+      "phoneTitle": "Phone",
+      "phoneSchedule": "Monday to Friday, 9:00 - 18:00",
+      "emailTitle": "Email",
+      "emailResponse": "Response within 24 hours"
+    },
+    "form": {
+      "docType": "Document Type",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "birthDate": "Date of Birth",
+      "phone": "Phone",
+      "phonePlaceholder": "612 345 678",
+      "activityLabel": "What activity interests you?",
+      "activities": {
+        "running": "🏃 Running",
+        "hiking": "🥾 Hiking",
+        "mtb": "🚴 MTB / Mountain Biking",
+        "road": "🚴 Road Cycling"
+      },
+      "submit": "Register Now",
+      "submitting": "Submitting...",
+      "securityNote": "Your data is secure and will only be used to contact you regarding your selected activity."
+    },
+    "messages": {
+      "emptyFields": "Please fill in all fields",
+      "invalidEmail": "Please enter a valid email",
+      "invalidPhone": "Please enter a valid phone number",
+      "success": "Registration successful! We will contact you soon.",
+      "error": "Error submitting the form. Please try again."
     }
   },
   "footer": {

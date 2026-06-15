@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { A11yProvider } from './context/A11yContext';
 import ScrollToTop from './components/ScrollToTop';
+import HoverMagnifier from './components/HoverMagnifier';
 
 // Importar componentes de páginas
 import Navbar from './components/Navbar';
@@ -30,6 +31,7 @@ export default function App() {
       <A11yProvider>
         <BrowserRouter>
           <ScrollToTop />
+          <HoverMagnifier />
           <div className="app-container">
             
             {/* === NAVBAR GLOBAL === */}

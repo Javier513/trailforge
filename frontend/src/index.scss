@@ -25,3 +25,142 @@
   background-color: rgba(30, 30, 30, 0.7);
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* --- Accesibilidad Global (A11yContext) --- */
+
+/* Alto Contraste 1 */
+body.a11y-high-contrast {
+  --bg-color: #000000 !important;
+  --text-primary: #ffffff !important;
+  --surface-color: #111111 !important;
+  --border-color: #ffffff !important;
+  --brand-orange: #ffff00 !important; /* Amarillo de alto contraste */
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
+  
+  .glass-card, .home-routes__card {
+    background-color: #000 !important;
+    border: 2px solid #fff !important;
+  }
+}
+
+/* Espaciado */
+body.a11y-spacing {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.8 !important;
+}
+
+/* Enlaces */
+body.a11y-links {
+@use './styles/themes';
+@use './styles/layout';
+@use './styles/components';
+
+/* Custom Micro-animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glass card */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 1rem;
+}
+
+[data-theme="dark"] .glass-card {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Accesibilidad Global (A11yContext) --- */
+
+/* Alto Contraste 1 */
+body.a11y-high-contrast {
+  --bg-color: #000000 !important;
+  --text-primary: #ffffff !important;
+  --surface-color: #111111 !important;
+  --border-color: #ffffff !important;
+  --brand-orange: #ffff00 !important; /* Amarillo de alto contraste */
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
+  
+  .glass-card, .home-routes__card {
+    background-color: #000 !important;
+    border: 2px solid #fff !important;
+  }
+}
+
+/* Espaciado */
+body.a11y-spacing {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+  line-height: 1.8 !important;
+}
+
+/* Enlaces */
+body.a11y-links {
+  a, .btn, button {
+    text-decoration: underline !important;
+    text-decoration-thickness: 3px !important;
+    text-underline-offset: 4px !important;
+  }
+  
+  a:active, button:active, .btn:active,
+  a:focus, button:focus, .btn:focus {
+    background-color: yellow !important;
+    color: black !important;
+    outline: 2px solid black !important;
+  }
+}
+
+/* Cursor grande (SVG de 48x48) */
+body.a11y-cursor,
+body.a11y-cursor * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>'), auto !important;
+}
+
+body.a11y-cursor button,
+body.a11y-cursor a,
+body.a11y-cursor .btn {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11V7a4 4 0 0 0-8 0v4M4 11h12v10H4z"/></svg>'), pointer !important;
+}
+
+/* --- Estilos para la nueva Lupa (HoverMagnifier) --- */
+.hover-magnifier-box {
+  position: fixed;
+  background-color: #fff;
+  color: #000;
+  border: 4px solid var(--brand-orange);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 10000;
+  pointer-events: none; /* No bloquea clics */
+  font-family: inherit;
+  font-weight: 700;
+  max-width: 400px;
+  line-height: 1.4;
+  /* Transiciones suaves de opacidad */
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  
+  &.visible {
+    opacity: 1;
+  }
+}
+
+/* Animación */
+body.a11y-no-animations,
+body.a11y-no-animations * {
+  animation: none !important;
+  transition: none !important;
+}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './Contact.scss';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     dniType: 'DNI',
     dni: '',
@@ -30,19 +32,19 @@ export default function Contact() {
     
     if (!formData.dni || !formData.nombre || !formData.apellidos || 
         !formData.fechaNacimiento || !formData.email || !formData.telefono) {
-      setMensaje('Por favor, rellena todos los campos');
+      setMensaje(t('contact.messages.emptyFields'));
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setMensaje('Por favor, ingresa un email válido');
+      setMensaje(t('contact.messages.invalidEmail'));
       return;
     }
 
     const telefonoRegex = /^[0-9]{9}$/;
     if (!telefonoRegex.test(formData.telefono.replace(/\D/g, ''))) {
-      setMensaje('Por favor, ingresa un teléfono válido (9 dígitos)');
+      setMensaje(t('contact.messages.invalidPhone'));
       return;
     }
 
@@ -50,7 +52,7 @@ export default function Contact() {
 
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setMensaje('¡Registración exitosa! Nos pondremos en contacto pronto.');
+      setMensaje(t('contact.messages.success'));
       
       setFormData({
         dniType: 'DNI',
@@ -65,7 +67,7 @@ export default function Contact() {
 
       setTimeout(() => setMensaje(''), 3000);
     } catch (error) {
-      setMensaje('Error al enviar el formulario. Intenta nuevamente.');
+      setMensaje(t('contact.messages.error'));
     } finally {
       setEnviando(false);
     }
@@ -75,8 +77,8 @@ export default function Contact() {
     <div className="contact">
       <header className="contact-hero">
         <div className="container">
-          <h1>Contacto</h1>
-          <p>Regístrate ahora y únete a nuestra comunidad de aventureros</p>
+          <h1>{t('contact.hero.title')}</h1>
+          <p>{t('contact.hero.subtitle')}</p>
         </div>
       </header>
 
@@ -84,23 +86,23 @@ export default function Contact() {
         <div className="contact-grid">
           
           <div className="contact-info">
-            <h2>Contacto Directo</h2>
+            <h2>{t('contact.info.title')}</h2>
             
             <div className="contact-info__card">
               <Phone size={32} />
               <div>
-                <h3>Teléfono</h3>
+                <h3>{t('contact.info.phoneTitle')}</h3>
                 <p>+34 91 234 56 78</p>
-                <p className="small">Lunes a viernes, 9:00 - 18:00</p>
+                <p className="small">{t('contact.info.phoneSchedule')}</p>
               </div>
             </div>
 
             <div className="contact-info__card">
               <Mail size={32} />
               <div>
-                <h3>Email</h3>
+                <h3>{t('contact.info.emailTitle')}</h3>
                 <p>info@trailforge.com</p>
-                <p className="small">Respuesta en 24 horas</p>
+                <p className="small">{t('contact.info.emailResponse')}</p>
               </div>
             </div>
           </div>
@@ -110,7 +112,7 @@ export default function Contact() {
               
               <div className="contact-form__row">
                 <div className="contact-form__group">
-                  <label>Tipo de Documento</label>
+                  <label>{t('contact.form.docType')}</label>
                   <select name="dniType" value={formData.dniType} onChange={handleInputChange}>
                     <option value="DNI">DNI</option>
                     <option value="NIE">NIE</option>
@@ -131,42 +133,42 @@ export default function Contact() {
 
               <div className="contact-form__row">
                 <div className="contact-form__group">
-                  <label>Nombre</label>
+                  <label>{t('contact.form.name')}</label>
                   <input
                     type="text"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleInputChange}
-                    placeholder="Tu nombre"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
                 <div className="contact-form__group">
-                  <label>Apellidos</label>
+                  <label>{t('contact.form.lastName')}</label>
                   <input
                     type="text"
                     name="apellidos"
                     value={formData.apellidos}
                     onChange={handleInputChange}
-                    placeholder="Tus apellidos"
+                    placeholder={t('contact.form.lastNamePlaceholder')}
                   />
                 </div>
               </div>
 
               <div className="contact-form__row">
                 <div className="contact-form__group">
-                  <label>Email</label>
+                  <label>{t('contact.form.email')}</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="tu@email.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
 
                 <div className="contact-form__group">
-                  <label>Fecha de Nacimiento</label>
+                  <label>{t('contact.form.birthDate')}</label>
                   <input
                     type="date"
                     name="fechaNacimiento"
@@ -177,38 +179,38 @@ export default function Contact() {
               </div>
 
               <div className="contact-form__group">
-                <label>Teléfono</label>
+                <label>{t('contact.form.phone')}</label>
                 <input
                   type="tel"
                   name="telefono"
                   value={formData.telefono}
                   onChange={handleInputChange}
-                  placeholder="612 345 678"
+                  placeholder={t('contact.form.phonePlaceholder')}
                 />
               </div>
 
               <div className="contact-form__group">
-                <label>¿Qué actividad te interesa?</label>
+                <label>{t('contact.form.activityLabel')}</label>
                 <select name="actividad" value={formData.actividad} onChange={handleInputChange}>
-                  <option value="running">🏃 Running</option>
-                  <option value="senderismo">🥾 Senderismo</option>
-                  <option value="mtb">🚴 MTB / Ciclismo de Montaña</option>
-                  <option value="carretera">🚴 Ciclismo de Carretera</option>
+                  <option value="running">{t('contact.form.activities.running')}</option>
+                  <option value="senderismo">{t('contact.form.activities.hiking')}</option>
+                  <option value="mtb">{t('contact.form.activities.mtb')}</option>
+                  <option value="carretera">{t('contact.form.activities.road')}</option>
                 </select>
               </div>
 
               {mensaje && (
-                <div className={`contact-form__message ${mensaje.includes('Error') ? 'contact-form__message--error' : 'contact-form__message--success'}`}>
+                <div className={`contact-form__message ${mensaje.includes(t('contact.messages.error').split('.')[0]) || mensaje.includes('Error') ? 'contact-form__message--error' : 'contact-form__message--success'}`}>
                   {mensaje}
                 </div>
               )}
 
               <button type="submit" disabled={enviando}>
-                {enviando ? 'Enviando...' : 'Registrarme Ahora'}
+                {enviando ? t('contact.form.submitting') : t('contact.form.submit')}
               </button>
 
               <p className="contact-form__note">
-                Tus datos están seguros y solo serán usados para contactarte sobre tu actividad seleccionada.
+                {t('contact.form.securityNote')}
               </p>
             </form>
           </div>
