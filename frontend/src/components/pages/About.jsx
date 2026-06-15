@@ -1,15 +1,18 @@
 import React from 'react';
-import { Heart, Target, Users, Zap } from 'lucide-react';
+import { Heart, Target, Users, Zap, Bike, Map } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './About.scss';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="about">
       <header className="about-hero">
         <div className="container">
-          <h1>Quiénes Somos</h1>
+          <h1>{t('about.hero.title')}</h1>
           <p>
-            Descubre la historia de TrailForge y nuestra pasión por las aventuras al aire libre
+            {t('about.hero.subtitle')}
           </p>
         </div>
       </header>
@@ -19,15 +22,12 @@ export default function About() {
         <section className="about-section">
           <div className="about-mission">
             <div className="about-mission__text">
-              <h2 className="about-section__title">Nuestra Misión</h2>
+              <h2 className="about-section__title">{t('about.mission.title')}</h2>
               <p>
-                En TrailForge, creemos que la naturaleza es uno de los grandes regalos de la vida. 
-                Nuestra misión es conectar a aventureros, senderistas, ciclistas y corredores con 
-                las rutas más hermosas y desafiantes de nuestro país.
+                {t('about.mission.p1')}
               </p>
               <p>
-                Queremos hacer que explorar nuevas rutas sea fácil, seguro y accesible para todos, 
-                desde principiantes hasta atletas experimentados.
+                {t('about.mission.p2')}
               </p>
             </div>
 
@@ -43,38 +43,38 @@ export default function About() {
         <hr className="divider" />
 
         <section className="about-section">
-          <h2 className="about-section__title about-section__title--center">Nuestros Valores</h2>
+          <h2 className="about-section__title about-section__title--center">{t('about.values.title')}</h2>
 
           <div className="about-values">
             <div className="about-values__card">
               <Heart size={48} />
-              <h3>Pasión</h3>
+              <h3>{t('about.values.items.passion.title')}</h3>
               <p>
-                Somos apasionados por la naturaleza y queremos compartir esa pasión contigo
+                {t('about.values.items.passion.desc')}
               </p>
             </div>
 
             <div className="about-values__card">
               <Target size={48} />
-              <h3>Integridad</h3>
+              <h3>{t('about.values.items.integrity.title')}</h3>
               <p>
-                Información veraz, rutas verificadas y reseñas honestas de nuestros usuarios
+                {t('about.values.items.integrity.desc')}
               </p>
             </div>
 
             <div className="about-values__card">
               <Users size={48} />
-              <h3>Comunidad</h3>
+              <h3>{t('about.values.items.community.title')}</h3>
               <p>
-                Construimos una comunidad donde los aventureros se conectan y comparten experiencias
+                {t('about.values.items.community.desc')}
               </p>
             </div>
 
             <div className="about-values__card">
               <Zap size={48} />
-              <h3>Innovación</h3>
+              <h3>{t('about.values.items.innovation.title')}</h3>
               <p>
-                Usamos tecnología para mejorar continuamente la experiencia de nuestros usuarios
+                {t('about.values.items.innovation.desc')}
               </p>
             </div>
           </div>
@@ -83,12 +83,10 @@ export default function About() {
         <hr className="divider" />
 
         <section className="about-section about-team">
-          <h2 className="about-section__title about-section__title--center">Nuestro Equipo</h2>
+          <h2 className="about-section__title about-section__title--center">{t('about.team.title')}</h2>
 
           <p className="about-team__intro">
-            Somos un equipo diverso de desarrolladores, diseñadores y apasionados por la naturaleza.
-            Cada uno de nosotros aporta su experiencia en deportes al aire libre para crear la mejor 
-            plataforma de rutas del país.
+            {t('about.team.intro')}
           </p>
 
           <div className="about-team__grid">
@@ -96,9 +94,9 @@ export default function About() {
               <div className="image-placeholder"></div>
               <div className="content">
                 <h3>María García</h3>
-                <p className="role">Fundadora & CEO</p>
+                <p className="role">{t('about.team.members.maria.role')}</p>
                 <p>
-                  Alpinista experimentada y amante de la naturaleza. Dirige la visión de TrailForge.
+                  {t('about.team.members.maria.desc')}
                 </p>
               </div>
             </div>
@@ -107,9 +105,9 @@ export default function About() {
               <div className="image-placeholder"></div>
               <div className="content">
                 <h3>Carlos López</h3>
-                <p className="role">CTO & Desarrollador</p>
+                <p className="role">{t('about.team.members.carlos.role')}</p>
                 <p>
-                  Ingeniero de software especializado en aplicaciones móviles y web.
+                  {t('about.team.members.carlos.desc')}
                 </p>
               </div>
             </div>
@@ -118,29 +116,71 @@ export default function About() {
               <div className="image-placeholder"></div>
               <div className="content">
                 <h3>Ana Fernández</h3>
-                <p className="role">Directora de Diseño</p>
+                <p className="role">{t('about.team.members.ana.role')}</p>
                 <p>
-                  Diseñadora UX/UI con pasión por crear experiencias intuitivas y bellas.
+                  {t('about.team.members.ana.desc')}
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        <hr className="divider" />
+
+        <section className="about-section about-partners">
+          <h2 className="about-section__title about-section__title--center">{t('about.partners.title')}</h2>
+
+          <p className="about-team__intro">
+            {t('about.partners.intro')}
+          </p>
+
+          <div className="about-team__grid" style={{ justifyContent: 'center' }}>
+            <div className="about-team__card">
+              <div className="image-placeholder" style={{backgroundColor: '#e67e22', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white'}}>
+                <Bike size={48} />
+              </div>
+              <div className="content">
+                <h3>Harman</h3>
+                <p className="role">{t('about.partners.companies.harman.role')}</p>
+                <p>
+                  {t('about.partners.companies.harman.desc')}
+                </p>
+              </div>
+            </div>
+
+            <div className="about-team__card">
+              <div className="image-placeholder" style={{backgroundColor: '#27ae60', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white'}}>
+                <Map size={48} />
+              </div>
+              <div className="content">
+                <h3>Summit Guides</h3>
+                <p className="role">{t('about.partners.companies.summit.role')}</p>
+                <p>
+                  {t('about.partners.companies.summit.desc')}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-partners__note" style={{maxWidth: '800px', margin: '2rem auto 0', padding: '1.5rem', backgroundColor: 'var(--surface-color)', borderRadius: '0.5rem', borderLeft: '4px solid var(--brand-orange)', boxShadow: '0 4px 6px var(--shadow-color)'}}>
+            <p style={{fontWeight: '500', margin: 0, textAlign: 'center', fontSize: '1.1rem'}}>{t('about.partners.ferratas')}</p>
+          </div>
+        </section>
+
         <section className="about-stats">
-          <h2>¿Por qué elegir TrailForge?</h2>
+          <h2>{t('about.stats.title')}</h2>
           <div className="about-stats__grid">
             <div className="about-stats__item">
               <div className="number">500+</div>
-              <p>Rutas verificadas</p>
+              <p>{t('about.stats.routes')}</p>
             </div>
             <div className="about-stats__item">
               <div className="number">10K+</div>
-              <p>Aventureros activos</p>
+              <p>{t('about.stats.adventurers')}</p>
             </div>
             <div className="about-stats__item">
               <div className="number">100%</div>
-              <p>Seguridad garantizada</p>
+              <p>{t('about.stats.security')}</p>
             </div>
           </div>
         </section>

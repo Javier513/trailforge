@@ -5,7 +5,8 @@
     "contact": "Contacto"
   },
   "home": {
-    "subtitle": "Explora aventuras sin límites",
+    "title": "Explora aventuras sin límites",
+    "subtitle": "Encuentra la ruta perfecta para tu próxima aventura",
     "searchPlaceholder": "Buscar ruta, ciudad, tipo de actividad...",
     "categoriesTitle": "Categorías de Actividades",
     "categories": {
@@ -21,6 +22,141 @@
       "easy": "FÁCIL",
       "moderate": "MODERADA",
       "hard": "DIFÍCIL"
+    },
+    "routes": {
+      "torrecilla": {
+        "title": "Pico Torrecilla - Málaga",
+        "desc": "Una ruta espectacular con vistas panorámicas de toda la provincia de Málaga"
+      },
+      "mulhacen": {
+        "title": "Pico Mulhacén - Sierra Nevada (Granada)",
+        "desc": "Descubre el pico más alto de la Península Ibérica"
+      },
+      "gredos": {
+        "title": "Laguna Grande de Gredos",
+        "desc": "Aventura y naturaleza en esta hermosa ruta de montaña"
+      },
+      "cares": {
+        "title": "Ruta del Cares - Picos de Europa",
+        "desc": "La legendaria ruta por el cañón. Espectáculo de naturaleza"
+      },
+      "lobo": {
+        "title": "Pico del Lobo - Sierra de Ayllón",
+        "desc": "Una ruta espectacular con vistas panorámicas del acantilado"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Quiénes Somos",
+      "subtitle": "Descubre la historia de TrailForge y nuestra pasión por las aventuras al aire libre"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "p1": "En TrailForge, creemos que la naturaleza es uno de los grandes regalos de la vida. Nuestra misión es conectar a aventureros, senderistas, ciclistas y corredores con las rutas más hermosas y desafiantes de nuestro país.",
+      "p2": "Queremos hacer que explorar nuevas rutas sea fácil, seguro y accesible para todos, desde principiantes hasta atletas experimentados."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "items": {
+        "passion": {
+          "title": "Pasión",
+          "desc": "Somos apasionados por la naturaleza y queremos compartir esa pasión contigo"
+        },
+        "integrity": {
+          "title": "Integridad",
+          "desc": "Información veraz, rutas verificadas y reseñas honestas de nuestros usuarios"
+        },
+        "community": {
+          "title": "Comunidad",
+          "desc": "Construimos una comunidad donde los aventureros se conectan y comparten experiencias"
+        },
+        "innovation": {
+          "title": "Innovación",
+          "desc": "Usamos tecnología para mejorar continuamente la experiencia de nuestros usuarios"
+        }
+      }
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "intro": "Somos un equipo diverso de desarrolladores, diseñadores y apasionados por la naturaleza. Cada uno de nosotros aporta su experiencia en deportes al aire libre para crear la mejor plataforma de rutas del país.",
+      "members": {
+        "maria": {
+          "role": "Fundadora & CEO",
+          "desc": "Alpinista experimentada y amante de la naturaleza. Dirige la visión de TrailForge."
+        },
+        "carlos": {
+          "role": "CTO & Desarrollador",
+          "desc": "Ingeniero de software especializado en aplicaciones móviles y web."
+        },
+        "ana": {
+          "role": "Directora de Diseño",
+          "desc": "Diseñadora UX/UI con pasión por crear experiencias intuitivas y bellas."
+        }
+      }
+    },
+    "partners": {
+      "title": "Empresas Colaboradoras",
+      "intro": "En TrailForge trabajamos con los mejores profesionales para ofrecerte servicios de calidad en tus aventuras.",
+      "companies": {
+        "harman": {
+          "role": "Alquiler de bicicletas",
+          "desc": "Especialistas en MTB y ciclismo de ruta. Ofrecen alquiler y mantenimiento de primera calidad."
+        },
+        "summit": {
+          "role": "Rutas guiadas de senderismo y trekking",
+          "desc": "Guías expertos locales para explorar la montaña con total seguridad y aprender sobre el entorno."
+        }
+      },
+      "ferratas": "Ambas empresas colaboran estrechamente para ofrecer equipamiento y guiado experto en las mejores Vías Ferratas de la región."
+    },
+    "stats": {
+      "title": "¿Por qué elegir TrailForge?",
+      "routes": "Rutas verificadas",
+      "adventurers": "Aventureros activos",
+      "security": "Seguridad garantizada"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contacto",
+      "subtitle": "Regístrate ahora y únete a nuestra comunidad de aventureros"
+    },
+    "info": {
+      "title": "Contacto Directo",
+      "phoneTitle": "Teléfono",
+      "phoneSchedule": "Lunes a viernes, 9:00 - 18:00",
+      "emailTitle": "Email",
+      "emailResponse": "Respuesta en 24 horas"
+    },
+    "form": {
+      "docType": "Tipo de Documento",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "lastName": "Apellidos",
+      "lastNamePlaceholder": "Tus apellidos",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "birthDate": "Fecha de Nacimiento",
+      "phone": "Teléfono",
+      "phonePlaceholder": "612 345 678",
+      "activityLabel": "¿Qué actividad te interesa?",
+      "activities": {
+        "running": "🏃 Running",
+        "hiking": "🥾 Senderismo",
+        "mtb": "🚴 MTB / Ciclismo de Montaña",
+        "road": "🚴 Ciclismo de Carretera"
+      },
+      "submit": "Registrarme Ahora",
+      "submitting": "Enviando...",
+      "securityNote": "Tus datos están seguros y solo serán usados para contactarte sobre tu actividad seleccionada."
+    },
+    "messages": {
+      "emptyFields": "Por favor, rellena todos los campos",
+      "invalidEmail": "Por favor, ingresa un email válido",
+      "invalidPhone": "Por favor, ingresa un teléfono válido (9 dígitos)",
+      "success": "¡Registro exitoso! Nos pondremos en contacto pronto.",
+      "error": "Error al enviar el formulario. Intenta nuevamente."
     }
   },
   "footer": {

@@ -5,7 +5,8 @@
     "contact": "Kontakt"
   },
   "home": {
-    "subtitle": "Utforska obegränsade äventyr",
+    "title": "Utforska obegränsade äventyr",
+    "subtitle": "Hitta den perfekta rutten för ditt nästa äventyr",
     "searchPlaceholder": "Sök rutt, stad, aktivitetstyp...",
     "categoriesTitle": "Aktivitetskategorier",
     "categories": {
@@ -21,6 +22,141 @@
       "easy": "LÄTT",
       "moderate": "MEDEL",
       "hard": "SVÅR"
+    },
+    "routes": {
+      "torrecilla": {
+        "title": "Torrecilla - Málaga",
+        "desc": "En spektakulär rutt med panoramautsikt över hela Málaga-provinsen"
+      },
+      "mulhacen": {
+        "title": "Mulhacén - Sierra Nevada (Granada)",
+        "desc": "Upptäck den högsta toppen på den iberiska halvön"
+      },
+      "gredos": {
+        "title": "Laguna Grande de Gredos",
+        "desc": "Äventyr och natur på denna vackra bergsrutt"
+      },
+      "cares": {
+        "title": "Ruta del Cares - Picos de Europa",
+        "desc": "Den legendariska kanjonrutten. Ett naturskådespel"
+      },
+      "lobo": {
+        "title": "Pico del Lobo - Sierra de Ayllón",
+        "desc": "En spektakulär rutt med panoramautsikt över klipporna"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Om Oss",
+      "subtitle": "Upptäck historien om TrailForge och vår passion för utomhusäventyr"
+    },
+    "mission": {
+      "title": "Vårt Uppdrag",
+      "p1": "På TrailForge tror vi att naturen är en av livets största gåvor. Vårt uppdrag är att koppla ihop äventyrare, vandrare, cyklister och löpare med de vackraste och mest utmanande rutterna i vårt land.",
+      "p2": "Vi vill göra det enkelt, säkert och tillgängligt för alla att utforska nya rutter, från nybörjare till erfarna idrottare."
+    },
+    "values": {
+      "title": "Våra Värderingar",
+      "items": {
+        "passion": {
+          "title": "Passion",
+          "desc": "Vi brinner för naturen och vill dela den passionen med dig"
+        },
+        "integrity": {
+          "title": "Integritet",
+          "desc": "Sanningsenlig information, verifierade rutter och ärliga recensioner från våra användare"
+        },
+        "community": {
+          "title": "Gemenskap",
+          "desc": "Vi bygger en gemenskap där äventyrare ansluter och delar upplevelser"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "Vi använder teknik för att ständigt förbättra våra användares upplevelse"
+        }
+      }
+    },
+    "team": {
+      "title": "Vårt Team",
+      "intro": "Vi är ett mångsidigt team av utvecklare, designers och naturentusiaster. Var och en av oss bidrar med vår erfarenhet av utomhussport för att skapa landets bästa ruttplattform.",
+      "members": {
+        "maria": {
+          "role": "Grundare & VD",
+          "desc": "Erfaren bergsbestigare och naturälskare. Styr visionen för TrailForge."
+        },
+        "carlos": {
+          "role": "CTO & Utvecklare",
+          "desc": "Mjukvaruingenjör med inriktning på mobil- och webbapplikationer."
+        },
+        "ana": {
+          "role": "Designchef",
+          "desc": "UX/UI-designer med en passion för att skapa intuitiva och vackra upplevelser."
+        }
+      }
+    },
+    "partners": {
+      "title": "Samarbetspartners",
+      "intro": "På TrailForge arbetar vi med de bästa yrkesmännen för att erbjuda dig kvalitetstjänster på dina äventyr.",
+      "companies": {
+        "harman": {
+          "role": "Cykeluthyrning",
+          "desc": "Specialister på MTB och landsvägscykling. De erbjuder högkvalitativ uthyrning och underhåll."
+        },
+        "summit": {
+          "role": "Guidad Vandring och Trekking",
+          "desc": "Experter från lokala guider för att utforska bergen med total säkerhet och lära sig om miljön."
+        }
+      },
+      "ferratas": "Båda företagen samarbetar nära för att erbjuda utrustning och expertledning på de bästa Via Ferratas i regionen."
+    },
+    "stats": {
+      "title": "Varför välja TrailForge?",
+      "routes": "Verifierade rutter",
+      "adventurers": "Aktiva äventyrare",
+      "security": "Garanterad säkerhet"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontakt",
+      "subtitle": "Registrera dig nu och gå med i vår gemenskap av äventyrare"
+    },
+    "info": {
+      "title": "Direktkontakt",
+      "phoneTitle": "Telefon",
+      "phoneSchedule": "Måndag till fredag, 9:00 - 18:00",
+      "emailTitle": "E-post",
+      "emailResponse": "Svar inom 24 timmar"
+    },
+    "form": {
+      "docType": "Dokumenttyp",
+      "name": "Namn",
+      "namePlaceholder": "Ditt namn",
+      "lastName": "Efternamn",
+      "lastNamePlaceholder": "Ditt efternamn",
+      "email": "E-post",
+      "emailPlaceholder": "din@epost.se",
+      "birthDate": "Födelsedatum",
+      "phone": "Telefon",
+      "phonePlaceholder": "612 345 678",
+      "activityLabel": "Vilken aktivitet intresserar dig?",
+      "activities": {
+        "running": "🏃 Löpning",
+        "hiking": "🥾 Vandring",
+        "mtb": "🚴 MTB / Mountainbike",
+        "road": "🚴 Landsvägscykling"
+      },
+      "submit": "Registrera Dig Nu",
+      "submitting": "Skickar...",
+      "securityNote": "Dina uppgifter är säkra och kommer endast att användas för att kontakta dig angående din valda aktivitet."
+    },
+    "messages": {
+      "emptyFields": "Vänligen fyll i alla fält",
+      "invalidEmail": "Vänligen ange en giltig e-postadress",
+      "invalidPhone": "Vänligen ange ett giltigt telefonnummer",
+      "success": "Registrering lyckades! Vi kommer snart att kontakta dig.",
+      "error": "Ett fel uppstod när formuläret skickades. Försök igen."
     }
   },
   "footer": {
