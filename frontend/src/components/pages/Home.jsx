@@ -68,7 +68,7 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
-                <button className="btn btn--primary">{t('home.viewDetails')}</button>
+                <button className="btn">{t('home.viewDetails')}</button>
               </div>
             </div>
 
@@ -83,7 +83,7 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
-                <button className="btn btn--primary">{t('home.viewDetails')}</button>
+                <button className="btn ">{t('home.viewDetails')}</button>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
-                <button className="btn btn--primary">{t('home.viewDetails')}</button>
+                <button className="btn">{t('home.viewDetails')}</button>
               </div>
             </div>
 
@@ -113,7 +113,7 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
                 </div>
-                <button className="btn btn--primary">{t('home.viewDetails')}</button>
+                <button className="btn">{t('home.viewDetails')}</button>
               </div>
             </div>
 
@@ -128,7 +128,7 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--easy">{t('home.difficulty.easy')}</span>
                 </div>
-                <button className="btn btn--primary">{t('home.viewDetails')}</button>
+                <button className="btn">{t('home.viewDetails')}</button>
               </div>
             </div>
           </div>
