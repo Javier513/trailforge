@@ -17,7 +17,7 @@
     },
     "featuredTitle": "Rutas Destacadas",
     "viewAll": "Ver todas",
-    "viewDetails": "Ver Detalles",
+    "viewDetails": "Ver detalles de la ruta",
     "difficulty": {
       "easy": "FÁCIL",
       "moderate": "MODERADA",
@@ -28,22 +28,31 @@
         "title": "Pico Torrecilla - Málaga",
         "desc": "Una ruta espectacular con vistas panorámicas de toda la provincia de Málaga"
       },
-      "mulhacen": {
-        "title": "Pico Mulhacén - Sierra Nevada (Granada)",
-        "desc": "Descubre el pico más alto de la Península Ibérica"
+      "Mijas": {
+        "title": "La bola - Mijas (Málaga)",
+        "desc": "Descubre el pico Mijas y sus increíbles vistas de la Costa del Sol"
+      },
+      "Repetidor": {
+        "title": "Repetidor Mijas - Sierra de Mijas(Málaga)",
+        "desc": "Ruta espectacular hacia las el repetidor de Mijas y contempla sus vistas de la Sosta del Sol"
+      },
+      "lobo": {
+        "title": "Mirador del Lobo - Benalmádena(Málaga)",
+        "desc": "Ruta espectacular con vistas panorámicas del acantilado"
+      },
+      "Veleta": {
+        "title": "Pico Veleta - Sierra Nevada (Granada)",
+        "desc": "Descubre el pico Veleta desde la Hoya de la Mora y sus increíbles vistas."
       },
       "gredos": {
         "title": "Laguna Grande de Gredos",
         "desc": "Aventura y naturaleza en esta hermosa ruta de montaña"
       },
-      "cares": {
-        "title": "Ruta del Cares - Picos de Europa",
-        "desc": "La legendaria ruta por el cañón. Espectáculo de naturaleza"
-      },
-      "lobo": {
-        "title": "Pico del Lobo - Sierra de Ayllón",
-        "desc": "Una ruta espectacular con vistas panorámicas del acantilado"
+      "chorreras": {
+        "title": "Las Chorreras del molinillo - Sierra Nevada (Granada)",
+        "desc": "Impresionante ruta por las chorreras del molinillo y su cascade de aguas cristalinas del deshielo."
       }
+      
     }
   },
   "about": {
