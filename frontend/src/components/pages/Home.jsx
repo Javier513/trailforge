@@ -68,58 +68,44 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
-                <button className="btn">{t('home.viewDetails')}</button>
+                <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/cuerno-torrecilla-carril-128680405', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
             </div>
 
-             {/* Ruta 2 */}
+            {/* Ruta 2 */}
             <div className="home-routes__card">
-              <div className="image" style={{backgroundImage: "url('https://stage-dms-spain.stageets.net/DbImgs/temp/B724F79BBB6E5B6AC2125F79F43E2577FBD6008D.jpg')"}}></div>
+              <div className="image" style={{backgroundImage: "url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9mv5KR-SKnaI-xXZtYOljkQWWjVBAewFpkRt5jHpVW8UhpjLni0eAGywYqVtDHPXfTaNLM2BlpF31Tz92kCPOigFs6gZ8TsmfMnrJHBJ8hYj49-zvX_A_7pVMfhOfOTVW8mwDVW27UA_E/s640/DSC08094_redimensionar.JPG')"}}></div>
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>{t('home.routes.mulhacen.title')}</h3>
-                    <p>{t('home.routes.mulhacen.desc')}</p>
+                    <h3>{t('home.routes.Mijas.title')}</h3>
+                    <p>{t('home.routes.Mijas.desc')}</p>
                   </div>
-                  <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
+                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
                 </div>
-                <button className="btn ">{t('home.viewDetails')}</button>
+                <button className="btn " onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/mijas-bola-mijas-senderos-129342757', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
             </div>
+
 
             {/* Ruta 3 */}
             <div className="home-routes__card">
-              <div className="image" style={{backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800')"}}></div>
+              <div className="image" style={{backgroundImage: "url('../src/assets/antenas.jpeg')"}}></div>
               <div className="content">
                 <div className="header">
                   <div>
-                    <h3>{t('home.routes.gredos.title')}</h3>
-                    <p>{t('home.routes.gredos.desc')}</p>
+                    <h3>{t('home.routes.Repetidor.title')}</h3>
+                    <p>{t('home.routes.Repetidor.desc')}</p>
                   </div>
-                  <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
+                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
                 </div>
-                <button className="btn">{t('home.viewDetails')}</button>
+                <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/osunillas-127375690', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
             </div>
 
             {/* Ruta 4 */}
             <div className="home-routes__card">
-              <div className="image" style={{backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800')"}}></div>
-              <div className="content">
-                <div className="header">
-                  <div>
-                    <h3>{t('home.routes.cares.title')}</h3>
-                    <p>{t('home.routes.cares.desc')}</p>
-                  </div>
-                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
-                </div>
-                <button className="btn">{t('home.viewDetails')}</button>
-              </div>
-            </div>
-
-            {/* Ruta 5 */}
-            <div className="home-routes__card">
-              <div className="image" style={{backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800')"}}></div>
+              <div className="image" style={{backgroundImage: "url('https://www.malagatop.com/wp-content/uploads/2022/01/Postal-Mirador-Canada-Lobo.jpg')"}}></div>
               <div className="content">
                 <div className="header">
                   <div>
@@ -128,7 +114,37 @@ export default function Home() {
                   </div>
                   <span className="difficulty difficulty--easy">{t('home.difficulty.easy')}</span>
                 </div>
-                <button className="btn">{t('home.viewDetails')}</button>
+                <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/calamorro-puerto-de-las-ovejas-y-mirador-del-lobo-desde-benalmadena-191897164', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
+              </div>
+            </div>
+           
+            {/* Ruta 5 */}
+            <div className="home-routes__card">
+              <div className="image" style={{backgroundImage: "url('../src/assets/Veleta.jpeg')"}}></div>
+              <div className="content">
+                <div className="header">
+                  <div>
+                    <h3>{t('home.routes.Veleta.title')}</h3>
+                    <p>{t('home.routes.Veleta.desc')}</p>
+                  </div>
+                  <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
+                </div>
+                <button className="btn " onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/sierra-nevada-subida-veleta-hoya-la-mora-51328540', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
+              </div>
+            </div>
+            
+            {/* Ruta 6 */}
+             <div className="home-routes__card">
+              <div className="image" style={{backgroundImage: "url('https://milyunarutas.com/wp-content/uploads/chorreras-del-molinillo.webp')"}}></div>
+              <div className="content">
+                <div className="header">
+                  <div>
+                    <h3>{t('home.routes.chorreras.title')}</h3>
+                    <p>{t('home.routes.chorreras.desc')}</p>
+                  </div>
+                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
+                </div>
+                <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/sierra-nevada-81064646', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
             </div>
           </div>
