@@ -165,7 +165,7 @@
 
     &__card {
       background-color: var(--surface-color);
-      border-radius: 1rem;
+      border-radius: 2rem;
       overflow: hidden;
       box-shadow: 0 10px 15px -3px var(--shadow-color);
       transition: box-shadow 0.3s ease;
@@ -175,7 +175,7 @@
       }
 
       .image {
-        height: 12rem;
+        height: 20rem; /* Tamaño imagen rutas*/
         background-size: cover;
         background-position: center;
       }
@@ -218,10 +218,16 @@
       }
 
       .btn {
-    background-color: #9FA65A;
-    border-color: #B5C134;
-    color: #fff;
-}
+        background-color: #9FA65A;
+        border-color: #B5C134;
+        color: #fff;
+      }
+
+      .btn:hover {
+        background-color: #31db1a;
+        border-color: #B5C134;
+        color: rgb(209, 11, 11);
+      }
 
     }
   }

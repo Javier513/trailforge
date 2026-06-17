@@ -112,7 +112,7 @@ export default function Home() {
                     <h3>{t('home.routes.lobo.title')}</h3>
                     <p>{t('home.routes.lobo.desc')}</p>
                   </div>
-                  <span className="difficulty difficulty--easy">{t('home.difficulty.easy')}</span>
+                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
                 </div>
                 <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/calamorro-puerto-de-las-ovejas-y-mirador-del-lobo-desde-benalmadena-191897164', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
@@ -142,7 +142,7 @@ export default function Home() {
                     <h3>{t('home.routes.chorreras.title')}</h3>
                     <p>{t('home.routes.chorreras.desc')}</p>
                   </div>
-                  <span className="difficulty difficulty--hard">{t('home.difficulty.hard')}</span>
+                  <span className="difficulty difficulty--moderate">{t('home.difficulty.moderate')}</span>
                 </div>
                 <button className="btn" onClick={() => window.open('https://es.wikiloc.com/rutas-carrera-por-montana/sierra-nevada-81064646', '_blank', 'noopener,noreferrer')}>{t('home.viewDetails')}</button>
               </div>
