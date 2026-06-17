@@ -93,10 +93,10 @@ export default function About() {
             <div className="about-team__card">
               <div className="image-placeholder"></div>
               <div className="content">
-                <h3>María García</h3>
-                <p className="role">{t('about.team.members.maria.role')}</p>
+                <h3>Javier Heredia</h3>
+                <p className="role">{t('about.team.members.Javier.role')}</p>
                 <p>
-                  {t('about.team.members.maria.desc')}
+                  {t('about.team.members.Javier.desc')}
                 </p>
               </div>
             </div>
@@ -104,10 +104,10 @@ export default function About() {
             <div className="about-team__card">
               <div className="image-placeholder"></div>
               <div className="content">
-                <h3>Carlos López</h3>
-                <p className="role">{t('about.team.members.carlos.role')}</p>
+                <h3>Amanda Lanetoft</h3>
+                <p className="role">{t('about.team.members.Amanda.role')}</p>
                 <p>
-                  {t('about.team.members.carlos.desc')}
+                  {t('about.team.members.Amanda.desc')}
                 </p>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function About() {
                 <Bike size={48} />
               </div>
               <div className="content">
-                <h3>Harman</h3>
+                <h3>Harman Bikes & Running</h3>
                 <p className="role">{t('about.partners.companies.harman.role')}</p>
                 <p>
                   {t('about.partners.companies.harman.desc')}

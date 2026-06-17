@@ -90,13 +90,13 @@
       "title": "Nuestro Equipo",
       "intro": "Somos un equipo diverso de desarrolladores, diseñadores y apasionados por la naturaleza. Cada uno de nosotros aporta su experiencia en deportes al aire libre para crear la mejor plataforma de rutas del país.",
       "members": {
-        "maria": {
-          "role": "Fundadora & CEO",
-          "desc": "Alpinista experimentada y amante de la naturaleza. Dirige la visión de TrailForge."
+        "Javier": {
+          "role": "Fundador & CEO",
+          "desc": "Trailrunner experimentado y amante de la naturaleza. Dirige la visión de TrailForge."
         },
-        "carlos": {
-          "role": "CTO & Desarrollador",
-          "desc": "Ingeniero de software especializado en aplicaciones móviles y web."
+        "Amanda": {
+          "role": "Desarrolladora & Coach",
+          "desc": "Ingeniero de software especializado en aplicaciones móviles y web. Trailrunner experimentada y amante de la naturaleza."
         },
         "ana": {
           "role": "Directora de Diseño",
@@ -109,8 +109,8 @@
       "intro": "En TrailForge trabajamos con los mejores profesionales para ofrecerte servicios de calidad en tus aventuras.",
       "companies": {
         "harman": {
-          "role": "Alquiler de bicicletas",
-          "desc": "Especialistas en MTB y ciclismo de ruta. Ofrecen alquiler y mantenimiento de primera calidad."
+          "role": "Alquiler de bicicletas y e-bikes, tienda de nutrición & running, y especialistas en vías ferratas",
+          "desc": "Grandes expertos en MTB y ciclismo de ruta. Ofrecen alquiler y mantenimiento de primera calidad."
         },
         "summit": {
           "role": "Rutas guiadas de senderismo y trekking",
