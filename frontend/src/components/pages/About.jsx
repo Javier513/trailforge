@@ -160,6 +160,19 @@ export default function About() {
                 </p>
               </div>
             </div>
+
+            <div className="about-team__card">
+              <div className="image-placeholder" style={{backgroundColor: '#27ae60', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white'}}>
+                <Map size={48} />
+              </div>
+              <div className="content">
+                <h3>Sol Running Club</h3>
+                <p className="role">{t('about.partners.companies.sol.role')}</p>
+                <p>
+                  {t('about.partners.companies.sol.desc')}
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="about-partners__note" style={{maxWidth: '800px', margin: '2rem auto 0', padding: '1.5rem', backgroundColor: 'var(--surface-color)', borderRadius: '0.5rem', borderLeft: '4px solid var(--brand-orange)', boxShadow: '0 4px 6px var(--shadow-color)'}}>
