@@ -218,16 +218,18 @@
       }
 
       .btn {
-        background-color: #9FA65A;
+        background-color: #4c8c2b; // Mismo color del boton de ver ruta que los botones de wikiloc
         border-color: #B5C134;
         color: #fff;
       }
-
+//
       .btn:hover {
-        background-color: #31db1a;
+        // transform: scale(1.125);
+        background-color: #4c8c2b;
         border-color: #B5C134;
         color: rgb(209, 11, 11);
       }
+//
 
     }
   }
