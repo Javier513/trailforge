@@ -115,6 +115,10 @@
         "summit": {
           "role": "Rutas guiadas de senderismo y trekking",
           "desc": "Guías expertos locales para explorar la montaña con total seguridad y aprender sobre el entorno."
+        },
+        "sol": {
+          "role": "Club de running",
+          "desc": "Club de running local para explorar la montaña con total seguridad y aprender sobre el entorno."
         }
       },
       "ferratas": "Ambas empresas colaboran estrechamente para ofrecer equipamiento y guiado experto en las mejores Vías Ferratas de la región."
